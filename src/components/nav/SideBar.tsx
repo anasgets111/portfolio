@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import styles from "./sidebar.module.scss";
 import { motion } from "framer-motion";
@@ -26,18 +27,21 @@ export const SideBar = () => {
   }, []);
 
   return (
-    <div style={{background: "var(--background-dark)"}}>
+    <div style={{ background: "var(--background-dark)" }}>
       <motion.nav
         initial={{ x: -70 }}
         animate={{ x: 0 }}
         transition={{ duration: 0.5 }}
         className={styles.sideBar}
       >
-        <span className={styles.logo} onClick={() => {
-          document.location.hash === "" ?
-          document.getElementById("main")?.scrollIntoView() :
-          document.location.hash = '';
-          }}>
+        <span
+          className={styles.logo}
+          onClick={() => {
+            document.location.hash === ""
+              ? document.getElementById("main")?.scrollIntoView()
+              : (document.location.hash = "");
+          }}
+        >
           JC<span>.</span>
         </span>
         <motion.a

@@ -1,10 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { StandardButton } from "@/components/buttons/StandardButton";
 import { Reveal } from "@/components/utils/Reveal";
 import { DotGrid } from "./DotGrid";
 import styles from "./hero.module.scss";
-import Profile from "@/public/jc.jpg";
 
 export const Hero = () => {
   return (
@@ -45,7 +46,7 @@ export const Hero = () => {
         >
           <Image
             className={styles.profile}
-            src={Profile}
+            src="/jc.jpg"
             alt="John Carlo Devera | Frontend Developer"
             width={250}
             height={250}

@@ -1,3 +1,4 @@
+"use client";
 import styles from "./dotgrid.module.scss";
 import anime from "animejs";
 
