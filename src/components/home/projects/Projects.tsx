@@ -108,7 +108,7 @@ const projects = [
     modalContent: (
       <>
         <p>
-          he project incorporated features like product selection, adding items
+          The project incorporated features like product selection, adding items
           to a shopping cart, and basic quantity adjustments.
         </p>
         <p>

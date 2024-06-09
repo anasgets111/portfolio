@@ -1,8 +1,7 @@
 import styles from "./headinglinks.module.scss";
-import { AiFillLinkedin, AiFillGithub, AiFillFacebook } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { SiGooglemeet } from "react-icons/si";
 import { FaWhatsapp } from "react-icons/fa";
 
 export const MyLinks = () => {
@@ -49,8 +48,6 @@ export const MyLinks = () => {
           <AiFillGithub size="2.4rem" />
         </Link>
       </motion.span>
-
-      
     </div>
   );
 };

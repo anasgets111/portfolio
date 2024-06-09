@@ -16,7 +16,7 @@ const experience = [
   {
     title: "BasicsEngage",
     position: "FrontEnd Developer",
-    time: "Jan 2024 - Now",
+    time: "Dec 2023 - Now",
     location: "Cairo, Egypt",
     description:
       "Redesign the website, including adding pricing, locales support, and improving the user interface and dashboard.",

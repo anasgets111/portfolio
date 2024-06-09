@@ -13,14 +13,14 @@ export const About = () => {
         <div>
           <Reveal>
             <p className={`${styles.aboutText} ${styles.highlightFirstLetter}`}>
-              Hey, I'm Anas! 👋 I recently traded blueprints for code,
+              Hey, I&apos;m Anas! 👋 I recently traded blueprints for code,
               channeling my passion for design and problem-solving into the
               world of web development.
             </p>
           </Reveal>
           <Reveal>
             <p className={styles.aboutText}>
-              Over the past months, I've been building a strong foundation in
+              Over the past months, I&apos;ve been building a strong foundation in
               HTML, CSS, and JavaScript, React and Next.JS.
             </p>
           </Reveal>
@@ -33,9 +33,9 @@ export const About = () => {
           </Reveal>
           <Reveal>
             <p className={styles.aboutText}>
-              I'm excited to collaborate on projects where I can leverage my
+              I&apos;m excited to collaborate on projects where I can leverage my
               design thinking and growing technical skills to craft beautiful
-              and intuitive user experiences. 🌳✏️ I'm always up for a chat
+              and intuitive user experiences. 🌳✏️ I&apos;m always up for a chat
               about design, technology, or anything in-between - let's connect!
               😊
             </p>
