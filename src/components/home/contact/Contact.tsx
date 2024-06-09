@@ -31,7 +31,7 @@ export const Contact = () => {
             >
               WhatsApp
             </Link>{" "}
-            if that's more your speed.
+            if that&apos;s more your speed.
           </p>
         </Reveal>
         <Reveal width="100%">

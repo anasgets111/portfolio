@@ -91,8 +91,8 @@ const projects = [
         </p>
         <p>
           This project helped me solidify my understanding of React component
-          structure, state management,server api calls, and user interface
-          development."
+          structure, state management, server api calls, and user interface
+          development.
         </p>
       </>
     ),

@@ -31,11 +31,12 @@ export const Hero = () => {
           </Reveal>
           <Reveal>
             <p className={styles.aboutCopy}>
-              From blueprints to bytes! 🏡💻 I traded my architect&apos;s ruler for a
-              keyboard 4 months ago and I&apos;m loving the journey so far. HTML,
-              CSS, JavaScript, TypeScript, React, Next.js, Tailwind... I'm
-              diving deep into the world of web development. Let&apos;s connect and
-              see what we can build together! 🚀
+              From blueprints to bytes! 🏡💻 I traded my architect&apos;s ruler
+              for a keyboard 4 months ago and I&apos;m loving the journey so
+              far. HTML, CSS, JavaScript, TypeScript, React, Next.js,
+              Tailwind... I&apos;m diving deep into the world of web
+              development. Let&apos;s connect and see what we can build
+              together! 🚀
             </p>
           </Reveal>
           <Reveal>

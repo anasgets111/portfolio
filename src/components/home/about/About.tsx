@@ -20,8 +20,8 @@ export const About = () => {
           </Reveal>
           <Reveal>
             <p className={styles.aboutText}>
-              Over the past months, I&apos;ve been building a strong foundation in
-              HTML, CSS, and JavaScript, React and Next.JS.
+              Over the past months, I&apos;ve been building a strong foundation
+              in HTML, CSS, and JavaScript, React and Next.JS.
             </p>
           </Reveal>
           <Reveal>
@@ -33,11 +33,11 @@ export const About = () => {
           </Reveal>
           <Reveal>
             <p className={styles.aboutText}>
-              I&apos;m excited to collaborate on projects where I can leverage my
-              design thinking and growing technical skills to craft beautiful
+              I&apos;m excited to collaborate on projects where I can leverage
+              my design thinking and growing technical skills to craft beautiful
               and intuitive user experiences. 🌳✏️ I&apos;m always up for a chat
-              about design, technology, or anything in-between - let's connect!
-              😊
+              about design, technology, or anything in-between - let&apos;s
+              connect! 😊
             </p>
           </Reveal>
           <Reveal>
