@@ -26,7 +26,7 @@ export const MyLinks = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        <Link href="tell:201011423350" target="_blank" rel="nofollow">
+        <Link href="tel:+201011423350" target="_blank" rel="nofollow">
           <FaMobileScreen size="2.4rem" />
         </Link>
       </motion.span>
