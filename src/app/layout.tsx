@@ -26,10 +26,16 @@ export const metadata: Metadata = {
     "TypeScript",
   ],
   publisher: "Anas Khalifa",
-
+  twitter: {
+    card: "summary_large_image",
+    title: "Anas Khalifa",
+    description: "Hi, I'm Anas, and I'm a FrontEnd Developer",
+    creator: "@anasgets111",
+    images: ["https://portfolio-1-0-chi.vercel.app/faviconL.png"],
+  },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/faviconL.png",
+    icon: "https://portfolio-1-0-chi.vercel.app/faviconL.png",
+    shortcut: "https://portfolio-1-0-chi.vercel.app/faviconL.png",
   },
 };
 
