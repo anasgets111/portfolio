@@ -37,9 +37,11 @@ export const SideBar = () => {
         <span
           className={styles.logo}
           onClick={() => {
-            document.location.hash === ""
-              ? document.getElementById("main")?.scrollIntoView()
-              : (document.location.hash = "");
+            if (!document.location.hash) {
+              document.getElementById("main")?.scrollIntoView();
+            } else {
+              document.location.hash = "";
+            }
           }}
         >
           AK<span>.</span>

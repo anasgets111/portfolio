@@ -26,7 +26,7 @@ export const MyLinks = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        <Link href="01011423350" target="_blank" rel="nofollow">
+        <Link href="tell: +201011423350" target="_blank" rel="nofollow">
           <SiGooglemeet size="2.4rem" />
         </Link>
       </motion.span>
@@ -36,7 +36,7 @@ export const MyLinks = () => {
         transition={{ duration: 0.5, delay: 0.1 }}
       >
         <Link
-          href="https://api.whatsapp.com/send?phone=00201011423350"
+          href="https://api.whatsapp.com/send?phone=+201011423350"
           target="_blank"
           rel="nofollow"
         >
