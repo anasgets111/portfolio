@@ -26,13 +26,7 @@ export const metadata: Metadata = {
     "TypeScript",
   ],
   publisher: "Anas Khalifa",
-  twitter: {
-    card: "summary_large_image",
-    title: "Anas Portfolio",
-    description: "Hi, I'm Anas, and I'm a FrontEnd Developer.",
-    creator: "Anas Khalifa",
-    images: ["test.com/screenshot.png"],
-  },
+
   icons: {
     icon: "/favicon.ico",
     shortcut: "/faviconL.png",
