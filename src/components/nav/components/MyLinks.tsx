@@ -3,7 +3,7 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
-import { SiGooglemeet } from "react-icons/si";
+import { FaMobileScreen } from "react-icons/fa6";
 
 export const MyLinks = () => {
   return (
@@ -26,8 +26,8 @@ export const MyLinks = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.1 }}
       >
-        <Link href="tell: +201011423350" target="_blank" rel="nofollow">
-          <SiGooglemeet size="2.4rem" />
+        <Link href="tell: 201011423350" target="_blank" rel="nofollow">
+          <FaMobileScreen size="2.4rem" />
         </Link>
       </motion.span>
       <motion.span
