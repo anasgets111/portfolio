@@ -25,7 +25,7 @@ export const Contact = () => {
             </Link>{" "}
             or{" "}
             <Link
-              href="https://api.whatsapp.com/send?phone=00201011423350"
+              href="https://api.whatsapp.com/send?phone=201011423350"
               target="_blank"
               rel="nofollow"
             >
