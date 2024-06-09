@@ -13,9 +13,16 @@ export const Hero = () => {
       <div className={styles.heroGrid}>
         <div className={styles.copyWrapper}>
           <Reveal>
-            <h1 className={styles.title}>
-              Hi, I&apos;m JC<span>.</span>
-            </h1>
+            <motion.h1
+              className={styles.title}
+              initial={{ y: 0 }}
+              whileHover={{
+                y: "10%",
+                transition: { duration: 0.5, delay: 0.1 },
+              }}
+            >
+              Hi, I&apos;m <span>Anas</span>.
+            </motion.h1>
           </Reveal>
           <Reveal>
             <h2 className={styles.subTitle}>
@@ -24,9 +31,11 @@ export const Hero = () => {
           </Reveal>
           <Reveal>
             <p className={styles.aboutCopy}>
-              I&apos;ve spent the last 3 years building and scaling applications
-              for some pretty cool companies and individuals. I also create
-              interesting self projects on my spare time. Let&apos;s connect!
+              From blueprints to bytes! 🏡💻 I traded my architect's ruler for a
+              keyboard 4 months ago and I'm loving the journey so far. HTML,
+              CSS, JavaScript, TypeScript, React, Next.js, Tailwind... I'm
+              diving deep into the world of web development. Let's connect and
+              see what we can build together! 🚀
             </p>
           </Reveal>
           <Reveal>
@@ -46,8 +55,8 @@ export const Hero = () => {
         >
           <Image
             className={styles.profile}
-            src="/jc.jpg"
-            alt="John Carlo Devera | Frontend Developer"
+            src="/ak.jpg"
+            alt="Anas Khalifa | Frontend Developer"
             width={250}
             height={250}
           />

@@ -42,7 +42,7 @@ export const SideBar = () => {
               : (document.location.hash = "");
           }}
         >
-          JC<span>.</span>
+          AK<span>.</span>
         </span>
         <motion.a
           initial={{ x: -70 }}

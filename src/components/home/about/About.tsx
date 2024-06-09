@@ -13,36 +13,31 @@ export const About = () => {
         <div>
           <Reveal>
             <p className={`${styles.aboutText} ${styles.highlightFirstLetter}`}>
-              Howdy! I&apos;m John Carlo Devera, and I&apos;m a Bachelor of
-              Science in Information Technology graduate.
-              <br />
-              <br />I have experience working in both the mobile and web
-              development worlds, with a focus on frontend development. I&apos;m
-              passionate about creating beautiful, responsive websites that
-              provide a great user experience.
+              Hey, I'm Anas! 👋 I recently traded blueprints for code,
+              channeling my passion for design and problem-solving into the
+              world of web development.
             </p>
           </Reveal>
           <Reveal>
             <p className={styles.aboutText}>
-              My skills include HTML, CSS, JavaScript, and various frontend
-              frameworks like React and Vue.js. I&apos;ve also worked with
-              backend technologies like Node.js, Firebase, MongoDB and
-              PHP/Laravel , allowing me to build full-stack applications.
+              Over the past months, I've been building a strong foundation in
+              HTML, CSS, and JavaScript, React and Next.JS.
             </p>
           </Reveal>
           <Reveal>
             <p className={styles.aboutText}>
-              When I&apos;m not coding, I enjoy digital painting. I believe that
-              maintaining a healthy work-life balance is crucial for staying
-              productive and motivated.
+              My background in architecture instilled in me a keen eye for
+              detail and a user-centric approach, which I bring to every line of
+              code I write.
             </p>
           </Reveal>
           <Reveal>
             <p className={styles.aboutText}>
-              I&apos;m always looking for new challenges and opportunities to
-              learn and grow as a developer. If you&apos;re interested in
-              working together or have any questions, please don&apos;t hesitate
-              to get in touch! 🔗
+              I'm excited to collaborate on projects where I can leverage my
+              design thinking and growing technical skills to craft beautiful
+              and intuitive user experiences. 🌳✏️ I'm always up for a chat
+              about design, technology, or anything in-between - let's connect!
+              😊
             </p>
           </Reveal>
           <Reveal>

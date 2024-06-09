@@ -18,146 +18,124 @@ export const Projects = () => {
 
 const projects = [
   {
-    title: "Classified",
-    imgSrc: "/project-imgs/agency-listing.png",
+    title: "BasicsEngage",
+    imgSrc: "/project-imgs/basicsengage.png",
     code: "#",
+    projectLink: "https://www.basicsengage.com/",
+    tech: ["React", "Nextjs", "Tailwind", "MongoDB"],
+    description: `Developed a fully functional e-commerce website using incorporating advanced UI design principles,
+          secure payment processing, and a comprehensive admin dashboard.`,
+    modalContent: (
+      <>
+        <p>
+          Designed and implemented a modern e-commerce platform with a focus on
+          creating an intuitive and visually appealing user interface. Developed
+          custom components for product display, shopping cart functionality,
+          and checkout process.
+        </p>
+        <p>
+          Integrated a secure payment gateway for seamless transactions and
+          built an admin dashboard to manage orders, inventory, and customer
+          data. Implemented data fetching patterns and followed best practices
+          for writing clean and maintainable code.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "CasePenguin",
+    imgSrc: "/project-imgs/casepenguin.png",
+    code: "https://github.com/anasgets111/casepenguin",
     projectLink: "#",
-    tech: ["React", "Nextjs", "Tailwind", "Prisma"],
-    description: "An Insurance Agency Listing Web Application.",
+    tech: ["React", "Nextjs", "Tailwind", "Prisma", "Kinde", "Stripe"],
+    description: `Developed a fully functional e-commerce website using incorporating advanced UI design principles,
+          secure payment processing, and a comprehensive admin dashboard.`,
     modalContent: (
       <>
         <p>
-          Worked as a front-end developer and created dynamic reusable
-          components and base layout from a mock-up.
+          Designed and implemented a modern e-commerce platform with a focus on
+          creating an intuitive and visually appealing user interface. Developed
+          custom components for product display, shopping cart functionality,
+          and checkout process.
         </p>
         <p>
-          The tech stack is based on Nextjs with the custom tailwind components,
-          connected to a Prisma backend.
+          Integrated a secure payment gateway for seamless transactions and
+          built an admin dashboard to manage orders, inventory, and customer
+          data. Implemented data fetching patterns and followed best practices
+          for writing clean and maintainable code.
         </p>
       </>
     ),
   },
   {
-    title: "Elancerz",
-    imgSrc: "/project-imgs/elancerz.png",
-    code: "https://www.github.com",
-    projectLink: "https://elancerz.com/",
-    tech: ["React", "Nextjs", "Sytled Components", "Firebase Auth", "Laravel"],
-    description:
-      "A Talent finder app for anything around the world. This is my first time as a React developer job.",
-    modalContent: (
-      <>
-        <p>
-          Worked as a front-end developer and created dynamic reusable
-          components, integrated calendly, messaging and project management
-          features.
-        </p>
-        <p>
-          The tech stack is based on Nextjs with the custom Styled components,
-          connected to a Laravel backend, with data stored in Mysql.
-        </p>
-      </>
-    ),
-  },
-  {
-    title: "Agency Iron Admin",
-    imgSrc: "/project-imgs/agency-iron-crm.png",
-    code: "https://www.github.com",
-    // projectLink: "https://agency-iron-crm.herokuapp.com/",
+    title: "Game Hub",
+    imgSrc: "/project-imgs/gamehub.png",
+    code: "https://github.com/anasgets111/game-hub",
     projectLink: "#",
-    tech: ["React", "MUI", "MongoDB", "Postgres", "Python"],
-    description:
-      "A Dashboard for clients and admin of Rocky Mountain West Insurance LLC. using Vuejs and re-worked using Reactjs.",
+    tech: [
+      "React",
+      "Nextjs",
+      "Sytled Components",
+      "Kinde Auth",
+      "Stripe Payments",
+      "Prisma",
+      "uploadthing",
+      "neon DB",
+    ],
+    description: "Built a single-page game hub application using React.",
     modalContent: (
       <>
         <p>
-          Worked as a front-end developer for this web application. Integrated
-          api&apos;s, Created dynamic and reusable components.
+          Users can browse a curated list of online games, filter by genre, and
+          access them directly within the application.
         </p>
         <p>
-          I work primarily on the frontend, creating reusable components and
-          integrating api.
-        </p>
-        <p>
-          The team in total consists of 3 developers. This is a passion project
-          for all of us.
+          This project helped me solidify my understanding of React component
+          structure, state management,server api calls, and user interface
+          development."
         </p>
       </>
     ),
   },
   {
-    title: "WorshipHIM",
-    imgSrc: "/project-imgs/wh_app.png",
-    code: "https://www.github.com",
-    projectLink:
-      "https://play.google.com/store/apps/details?id=com.ellinx.lightapps.worshiphim&hl=en&gl=US",
-    tech: ["React", "React Native", "Styled Components", "Android"],
+    title: "Amazon Mockup",
+    imgSrc: "/project-imgs/amazon.png",
+    code: "https://github.com/anasgets111/javascript-amazon-project",
+    projectLink: "https://anasgets111.github.io/javascript-amazon-project/",
+    tech: ["HTML", "CSS", "JavaScript"],
     description:
-      "WorshipHIM is a chord and lyrics app developed to help ease everyone in their worship to God.",
+      "Developed an interactive product page mockup simulating the Amazon shopping experience using JavaScript.",
     modalContent: (
       <>
         <p>
-          WorshipHIM is a chord and lyrics app developed to help ease everyone
-          in their worship to God. So that all may know, from the rising of the
-          sun to its setting, That there is none besides God. He is the Lord and
-          there&apos;s no other! Praise Him, Worship Him!
-        </p>
-        <p>This is a very fun project that i made using React Native.</p>
-      </>
-    ),
-  },
-  {
-    title: "WorshipHIM Landing Page",
-    imgSrc: "/project-imgs/worshiphim.png",
-    code: "https://www.github.com",
-    projectLink: "https://worshiphim.vercel.app/",
-    tech: ["React", "Nextjs", "Tailwind", "Google Play Scrapper", "Ko-Fi"],
-    description:
-      "Landing Page of WorshipHIM mobile application for showcasing feature rich and tools of the app.",
-    modalContent: (
-      <>
-        <p>
-          This is another self project that i made to showcase our mobile app.
+          he project incorporated features like product selection, adding items
+          to a shopping cart, and basic quantity adjustments.
         </p>
         <p>
-          I integrated ko-fi donation and uses Template for this Nextjs Project.
-          I also use a plugin for scrapping data from our google play to display
-          directly on the landing page.
+          This project helped me grasp core JavaScript concepts like DOM
+          manipulation, event handling, and user interaction.
         </p>
       </>
     ),
   },
   {
-    title: "Portfolio v.2",
-    imgSrc: "/project-imgs/portfolio-01.png",
-    code: "https://github.com/jcdevz-dev/portfolio",
+    title: "YouTube Mockup",
+    imgSrc: "/project-imgs/youtube.png",
+    code: "https://github.com/anasgets111/Youtube-Mockup",
     projectLink: "#",
-    tech: ["React", "Styled Components", "Typescript", "Gatsby"],
-    description: "First Portfolio Made with React JS",
+    tech: ["HTML", "CSS"],
+    description:
+      "Built a responsive YouTube mockup website replicating core functionalities using HTML and CSS..",
     modalContent: (
       <>
         <p>
-          This is my second version of my portfolio that i made to showcase my
-          projects.
+          The mockup included features like a search bar, video listings, and a
+          navigation menu.
         </p>
-        <p>Trying out gatsby and creating my second version of portfolio</p>
-      </>
-    ),
-  },
-  {
-    title: "Portfolio v.1",
-    imgSrc: "/project-imgs/portfolio-00.png",
-    code: "https://github.com/jcdevz-dev/jc-portfolio",
-    projectLink: "https://jc-devera.vercel.app/",
-    tech: ["React", "Styled Components", "Typescript"],
-    description: "First Portfolio Made with React JS",
-    modalContent: (
-      <>
         <p>
-          This is my first version of my portfolio that i made to showcase my
-          projects.
+          This project helped me solidify my understanding of HTML structure,
+          CSS styling, and responsive web design principles.
         </p>
-        <p>First step for learning React JS and creating my portfolio</p>
       </>
     ),
   },

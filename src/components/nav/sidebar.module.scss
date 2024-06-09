@@ -17,6 +17,7 @@
   scrollbar-width: none; /* Firefox */
 
   a {
+    transition: width 0.3s ease;
     height: 100px;
 
     flex-shrink: 0;
@@ -79,3 +80,4 @@
 .sideBar::-webkit-scrollbar {
   display: none;
 }
+

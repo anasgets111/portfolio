@@ -17,7 +17,7 @@ export const Contact = () => {
             Have an idea to discuss? Shoot me an email if you want to connect!
             You can also find me on{" "}
             <Link
-              href="https://www.linkedin.com/in/john-carlo-devera-5240761b6/"
+              href="https://www.linkedin.com/in/anasgets111/"
               target="_blank"
               rel="nofollow"
             >
@@ -25,17 +25,17 @@ export const Contact = () => {
             </Link>{" "}
             or{" "}
             <Link
-              href="https://join.skype.com/invite/vKVMgi5SGjvM"
+              href="https://api.whatsapp.com/send?phone=00201011423350"
               target="_blank"
               rel="nofollow"
             >
-              Skype
+              WhatsApp
             </Link>{" "}
-            if that&apos;s more your speed.
+            if that's more your speed.
           </p>
         </Reveal>
         <Reveal width="100%">
-          <Link href="mailto:dev.johncarlo.devera@gmail.com">
+          <Link href="mailto:anasgets111@gmail.com">
             <div className={styles.contactEmail}>
               <AiFillMail size="2.4rem" />
               <span>Send Email</span>
