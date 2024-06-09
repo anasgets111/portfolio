@@ -36,7 +36,7 @@ export const MyLinks = () => {
         transition={{ duration: 0.5, delay: 0.1 }}
       >
         <Link
-          href="https://api.whatsapp.com/send?phone=+201011423350"
+          href="https://api.whatsapp.com/send?phone=201011423350"
           target="_blank"
           rel="nofollow"
         >
