@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Anas Khalifa",
     description: "Hi, I'm Anas, and I'm a FrontEnd Developer",
     creator: "Anas Khalifa",
-    images: ["https://anas-portfolio-black.vercel.app/faviconL.png"],
+    images: ["https://anas-portfolio-black.vercel.app/ak.jpg"],
   },
   openGraph: {
     title: "Anas Khalifa",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Anas Khalifa Portfolio",
     images: [
       {
-        url: "https://anas-portfolio-black.vercel.app/faviconL.png",
+        url: "https://anas-portfolio-black.vercel.app/ak.jpg",
         width: 599,
         height: 599,
         alt: "Anas Khalifa Portfolio",
