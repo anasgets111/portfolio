@@ -46,8 +46,16 @@ const projects = [
     title: "CasePenguin",
     imgSrc: "/project-imgs/casepenguin.png",
     code: "https://github.com/anasgets111/casepenguin",
-    projectLink: "#",
-    tech: ["React", "Nextjs", "Tailwind", "Prisma", "Kinde", "Stripe"],
+    projectLink: "https://casepenguin.vercel.app",
+    tech: [
+      "React",
+      "Nextjs",
+      "Tailwind",
+      "Prisma DB",
+      "Kinde Auth",
+      "Stripe Payments",
+      "NeonTech DB",
+    ],
     description: `Developed a fully functional e-commerce website using incorporating advanced UI design principles,
           secure payment processing, and a comprehensive admin dashboard.`,
     modalContent: (
