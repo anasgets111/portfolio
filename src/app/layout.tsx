@@ -53,6 +53,7 @@ export const metadata: Metadata = {
     icon: "https://anas-portfolio-black.vercel.app/favicon.png",
     shortcut: "https://anas-portfolio-black.vercel.app/favicon.png",
   },
+  metadataBase: new URL("https://anas-portfolio-black.vercel.app"),
 };
 
 export default function RootLayout({
