@@ -12,6 +12,7 @@
 		"animejs": "^4.0.2",
 		"framer-motion": "^12.9.2",
 		"next": "15.3.1",
+		"postcss": "^8.5.3",
 		"prop-types": "^15.8.1",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
@@ -22,7 +23,7 @@
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "^3",
-		"@tailwindcss/postcss": "^4",
+		"@tailwindcss/postcss": "^4.1.4",
 		"@types/animejs": "^3.1.13",
 		"@types/node": "^20",
 		"@types/prop-types": "^15.7.14",
@@ -31,7 +32,7 @@
 		"@types/scheduler": "^0.26.0",
 		"eslint": "^9",
 		"eslint-config-next": "15.3.1",
-		"tailwindcss": "^4",
+		"tailwindcss": "^4.1.4",
 		"typescript": "^5"
 	}
 }
