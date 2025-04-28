@@ -1,26 +1,47 @@
+/* stats.module.scss */
 .stats {
-  position: relative;
+	position: relative;
 }
 
 .statColumn {
-  h4 {
-    display: flex;
-    align-items: center;
-
-    margin-bottom: 2.4rem;
-    span {
-      font-size: var(--text-md);
-      font-weight: bold;
-      position: relative;
-      margin-left: 0.8rem;
-    }
-  }
+	h4 {
+		display: flex;
+		align-items: center;
+		margin-bottom: 2.4rem;
+		span {
+			font-size: var(--text-md);
+			font-weight: bold;
+			margin-left: 0.8rem;
+		}
+	}
 }
 
-.statGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
+/* 2. clip to a fixed height and hide overflow */
+.scrollContainer {
+	overflow: hidden;
+	/* adjust this height to however many rows you want visible */
+	height: 30rem;
+	margin-bottom: 2rem;
+}
 
-  margin-bottom: 4.8rem;
+/* 3. your existing grid styles + animation */
+.statGrid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.2rem;
+}
+
+/* 4. animate upward over one full cycle (50% = one original-length scroll) */
+.scrollContent {
+	animation: scrollUp 20s linear infinite;
+}
+
+/* 4. keyframes for bottom-to-top marquee */
+@keyframes scrollUp {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-50%);
+	}
 }

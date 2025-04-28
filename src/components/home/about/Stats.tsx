@@ -1,6 +1,39 @@
+// Stats.tsx
 import styles from "./stats.module.scss";
-import { AiFillCode, AiFillSmile } from "react-icons/ai";
+import { AiFillCode } from "react-icons/ai";
 import { Reveal } from "@/components/utils/Reveal";
+
+// 1. put all chip labels in an array
+const chipList = [
+	"CSS",
+	"HTML",
+	"JavaScript",
+	"TypeScript",
+	"GitHub",
+	"Tailwind",
+	"React",
+	"Nextjs",
+	"NodeJS",
+	"Kinde Auth",
+	"Stripe",
+	"AWS",
+	"PrismaDB",
+	"Sass",
+	"MongoDB",
+	"Docker",
+	"ArchLinux",
+	"Ubuntu",
+	"Bash",
+	"Fish Shell",
+	"MySQL",
+	"Livewire",
+	"PHP",
+	"Vue.js",
+	"Filament",
+	"Laravel",
+	"Nova",
+	"SSH",
+];
 
 export const Stats = () => {
 	return (
@@ -14,35 +47,27 @@ export const Stats = () => {
 						/>
 						<span>Skills</span>
 					</h4>
-					<div className={styles.statGrid}>
-						<span className="chip">CSS</span>
-						<span className="chip">HTML</span>
-						<span className="chip">JavaScript</span>
-						<span className="chip">TypeScript</span>
-						<span className="chip">GitHub</span>
-						<span className="chip">Tailwind</span>
-						<span className="chip">React</span>
-						<span className="chip">Nextjs</span>
-						<span className="chip">NodeJS</span>
-						<span className="chip">Kinde Auth</span>
-						<span className="chip">Stripe</span>
-						<span className="chip">AWS</span>
-						<span className="chip">PrismaDB</span>
-						<span className="chip">Sass</span>
-						<span className="chip">MongoDB</span>
-						<span className="chip">Docker</span>
-						<span className="chip">ArchLinux</span>
-						<span className="chip">Ubuntu</span>
-						<span className="chip">Bash</span>
-						<span className="chip">Fish Shell</span>
-						<span className="chip">MySQL</span>
-						<span className="chip">Livewire</span>
-						<span className="chip">PHP</span>
-						<span className="chip">Vue.js</span>
-						<span className="chip">Filament</span>
-						<span className="chip">Laravel</span>
-						<span className="chip">Nova</span>
-						<span className="chip">SSH</span>
+
+					{/* 2. scrollContainer is the “mask” */}
+					<div className={styles.scrollContainer}>
+						{/* 3. render chipList twice for seamless looping */}
+						<div className={`${styles.statGrid} ${styles.scrollContent}`}>
+							{chipList.map((c) => (
+								<span
+									key={c}
+									className="chip">
+									{c}
+								</span>
+							))}
+							{chipList.map((c, i) => (
+								// second render needs unique keys
+								<span
+									key={`${c}-${i}`}
+									className="chip">
+									{c}
+								</span>
+							))}
+						</div>
 					</div>
 				</div>
 			</Reveal>
