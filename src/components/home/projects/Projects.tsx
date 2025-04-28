@@ -4,12 +4,22 @@ import styles from "./projects.module.scss";
 
 export const Projects = () => {
 	return (
-		<section className="section-wrapper" id="projects">
-			<SectionHeader title="Projects" dir="r" />
+		<section
+			className="section-wrapper"
+			id="projects">
+			<SectionHeader
+				title="Projects"
+				dir="r"
+			/>
 
 			<div className={styles.projects}>
 				{projects.map((project) => {
-					return <Project key={project.title} {...project} />;
+					return (
+						<Project
+							key={project.title}
+							{...project}
+						/>
+					);
 				})}
 			</div>
 		</section>
@@ -17,6 +27,34 @@ export const Projects = () => {
 };
 
 const projects = [
+	{
+		title: "Sacredcube",
+		imgSrc: "/project-imgs/sacredcube.png",
+		code: "#",
+		projectLink: "https://sacredcube.co",
+		tech: ["PHP", "Laravel", "Nova", "Filament", "Vue.js", "MySQL", "Livewire"],
+		description:
+			"Contributed to a multi-tenant ERP & app-builder SaaS platform handling over 900,000 files (5 GB) with strict tenant isolation.",
+		modalContent: (
+			<>
+				<p>
+					Supported the core team in architecting and maintaining a large-scale
+					SaaS platform.
+				</p>
+				<p>
+					Collaborated on backend API endpoints and data models, implementing
+					global search and optimizing MySQL queries. Migrating to and extending
+					Filament form resources.
+				</p>
+				<p>
+					Developed Vue.js components with Tailwind UI for data entry, real-time
+					notifications, and role-based permissions.And maintained CI/CD
+					pipelines while documenting setup procedures and creating tenant
+					onboarding seeders.
+				</p>
+			</>
+		),
+	},
 	{
 		title: "BasicsEngage",
 		imgSrc: "/project-imgs/basicsengage.png",
