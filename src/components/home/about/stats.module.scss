@@ -34,6 +34,7 @@
 /* 4. animate upward over one full cycle (50% = one original-length scroll) */
 .scrollContent {
 	animation: scrollUp 20s linear infinite;
+	padding-bottom: 1.2rem; /* ensure same gap between loops */
 }
 
 /* 4. keyframes for bottom-to-top marquee */
@@ -42,6 +43,8 @@
 		transform: translateY(0);
 	}
 	100% {
-		transform: translateY(-50%);
+		transform: translateY(
+			calc(-50% - 1.2rem)
+		); /* include extra gap at loop boundary */
 	}
 }

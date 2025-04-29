@@ -28,7 +28,7 @@ const chipList = [
 	"MySQL",
 	"Livewire",
 	"PHP",
-	"Vue.js",
+	"VueJs",
 	"Filament",
 	"Laravel",
 	"Nova",
