@@ -16,8 +16,7 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 
-  a {
-    transition: width 0.3s ease;
+  > a:not(.logo) {
     height: 100px;
 
     flex-shrink: 0;
@@ -36,7 +35,7 @@
     width: 100%;
   }
 
-  a:hover {
+  > a:not(.logo):hover {
     background: var(--background);
     border-right: 1px solid var(--brand);
     opacity: 1;

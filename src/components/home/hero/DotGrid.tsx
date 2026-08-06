@@ -3,14 +3,13 @@ import styles from "./dotgrid.module.scss";
 import { animate, stagger } from "animejs";
 import type { MouseEvent } from "react";
 
+const GRID_WIDTH = 25;
+const GRID_HEIGHT = 20;
+
 export const DotGrid = () => {
-	const GRID_WIDTH = 25;
-	const GRID_HEIGHT = 20;
-
-	const dots = [];
-
 	const handleDotClick = (event: MouseEvent<HTMLDivElement>) => {
-		// In v4, keyframes need to use 'to' instead of 'value'
+		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
 		animate(".dot-point", {
 			scale: [
 				{ to: 1.35, ease: "outSine", duration: 250 },
@@ -31,31 +30,20 @@ export const DotGrid = () => {
 		});
 	};
 
-	let index = 0;
-
-	for (let i = 0; i < GRID_WIDTH; i++) {
-		for (let j = 0; j < GRID_HEIGHT; j++) {
-			dots.push(
+	return (
+		<div
+			style={{ gridTemplateColumns: `repeat(${GRID_WIDTH}, 1fr)` }}
+			className={styles.dotGrid}
+			aria-hidden="true">
+			{Array.from({ length: GRID_WIDTH * GRID_HEIGHT }, (_, index) => (
 				<div
 					onClick={handleDotClick}
 					className={styles.dotWrapper}
 					data-index={index}
-					key={`${i}-${j}`}>
-					<div
-						className={`${styles.dot} dot-point`}
-						data-index={index}
-					/>
+					key={index}>
+					<div className={`${styles.dot} dot-point`} />
 				</div>
-			);
-			index++;
-		}
-	}
-
-	return (
-		<div
-			style={{ gridTemplateColumns: `repeat(${GRID_WIDTH}, 1fr)` }}
-			className={styles.dotGrid}>
-			{dots.map((dot) => dot)}
+			))}
 		</div>
 	);
 };

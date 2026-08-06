@@ -5,8 +5,8 @@ export const Experience = () => {
   return (
     <section className="section-wrapper" id="experience">
       <SectionHeader title="Experience" dir="l" />
-      {experience.map((item, index) => (
-        <ExperienceItem key={index} {...item} />
+      {experience.map((item) => (
+        <ExperienceItem key={item.title} {...item} />
       ))}
     </section>
   );

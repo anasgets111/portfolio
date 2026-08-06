@@ -1,22 +1,21 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import { Reveal } from "@/components/utils/Reveal";
-import { useAnimation, useInView, motion } from "framer-motion";
-import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { ProjectModal } from "./ProjectModal";
 import styles from "./projects.module.scss";
 
 interface Props {
-	modalContent: React.ReactNode;
+	modalContent: ReactNode;
 	description: string;
 	projectLink: string;
 	imgSrc: string;
 	tech: string[];
 	title: string;
-	code: string;
+	code?: string;
 }
 
 export const Project = ({
@@ -30,61 +29,49 @@ export const Project = ({
 }: Props) => {
 	const [isOpen, setIsOpen] = useState(false);
 
-	const controls = useAnimation();
-
-	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true });
-
-	useEffect(() => {
-		if (isInView) {
-			controls.start("visible");
-		} else {
-			controls.start("hidden");
-		}
-	}, [isInView, controls]);
-
 	return (
 		<>
 			<motion.div
-				ref={ref}
-				variants={{
-					hidden: { opacity: 0, y: 100 },
-					visible: { opacity: 1, y: 0 },
-				}}
-				initial="hidden"
-				animate={controls}
+				initial={{ opacity: 0, y: 100 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
 				transition={{ duration: 0.75 }}>
-				<motion.div
+				<motion.button
+					type="button"
 					whileHover={{ scale: 1.1 }}
 					onClick={() => setIsOpen(true)}
-					className={styles.projectImage}>
+					className={styles.projectImage}
+					aria-label={`Learn more about ${title}`}>
 					<Image
 						src={imgSrc}
-						alt={`An image of the ${title} project.`}
+						alt={`${title} project preview`}
 						width={1900}
 						height={900}
-						className={styles.img}
 					/>
-				</motion.div>
+				</motion.button>
 				<div className={styles.projectCopy}>
 					<Reveal width="100%">
 						<div className={styles.projectTitle}>
 							<h4>{title}</h4>
 							<div className={styles.projectTitleLine} />
 
-							<Link
-								href={code}
-								target="_blank"
-								rel="nofollow">
-								<AiFillGithub size="2.8rem" />
-							</Link>
+							{code && (
+								<a
+									href={code}
+									target="_blank"
+									rel="noreferrer"
+									aria-label={`${title} source code`}>
+									<AiFillGithub size="2.8rem" />
+								</a>
+							)}
 
-							<Link
+							<a
 								href={projectLink}
 								target="_blank"
-								rel="nofollow">
+								rel="noreferrer"
+								aria-label={`Open ${title}`}>
 								<AiOutlineExport size="2.8rem" />
-							</Link>
+							</a>
 						</div>
 					</Reveal>
 					<Reveal>
@@ -93,21 +80,26 @@ export const Project = ({
 					<Reveal>
 						<p className={styles.projectDescription}>
 							{description} <br />
-							<span onClick={() => setIsOpen(true)}>Learn more {">"}</span>
+							<button
+								type="button"
+								onClick={() => setIsOpen(true)}>
+								Learn more {">"}
+							</button>
 						</p>
 					</Reveal>
 				</div>
 			</motion.div>
-			<ProjectModal
-				modalContent={modalContent}
-				projectLink={projectLink}
-				setIsOpen={setIsOpen}
-				isOpen={isOpen}
-				imgSrc={imgSrc}
-				title={title}
-				code={code}
-				tech={tech}
-			/>
+			{isOpen && (
+				<ProjectModal
+					modalContent={modalContent}
+					projectLink={projectLink}
+					onClose={() => setIsOpen(false)}
+					imgSrc={imgSrc}
+					title={title}
+					code={code}
+					tech={tech}
+				/>
+			)}
 		</>
 	);
 };

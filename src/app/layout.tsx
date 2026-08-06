@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { MotionConfig } from "framer-motion";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
 		title: "Anas Khalifa",
 		description: "Hi, I'm Anas, and I'm a FrontEnd Developer",
 		creator: "@anasgets111",
-		images: ["https://anas-portfolio-black.vercel.app/ak.jpg"],
+		images: ["/ak.jpg"],
 	},
 	openGraph: {
 		title: "Anas Khalifa",
@@ -40,9 +41,9 @@ export const metadata: Metadata = {
 		siteName: "Anas Khalifa Portfolio",
 		images: [
 			{
-				url: "https://anas-portfolio-black.vercel.app/ak.jpg",
-				width: 1200,
-				height: 630,
+				url: "/ak.jpg",
+				width: 960,
+				height: 960,
 				alt: "Anas Khalifa Portfolio",
 			},
 		],
@@ -50,8 +51,7 @@ export const metadata: Metadata = {
 		type: "website",
 	},
 	icons: {
-		icon: "https://anas-portfolio-black.vercel.app/favicon.png",
-		shortcut: "https://anas-portfolio-black.vercel.app/favicon.png",
+		icon: "/favicon.ico",
 	},
 	metadataBase: new URL("https://anas-portfolio-black.vercel.app"),
 };
@@ -63,12 +63,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<head />
-
-			<body
-				id="root"
-				className={poppins.className}>
-				{children}
+			<body className={poppins.className}>
+				<MotionConfig reducedMotion="user">{children}</MotionConfig>
 			</body>
 		</html>
 	);

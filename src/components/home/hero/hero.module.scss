@@ -50,6 +50,20 @@
   font-weight: 200;
 }
 
+.contactLink {
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+  border-radius: 4px;
+  background: var(--brand);
+  color: var(--text);
+  font-size: var(--text-sm);
+  transition: 0.2s opacity;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
 .profile {
   margin: 2rem;
   z-index: 10;

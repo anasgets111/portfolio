@@ -3,88 +3,57 @@ import { useEffect, useState } from "react";
 import styles from "./sidebar.module.scss";
 import { motion } from "framer-motion";
 
+const navItems = [
+	{ id: "about", label: "About" },
+	{ id: "projects", label: "Projects" },
+	{ id: "experience", label: "Exp." },
+	{ id: "contact", label: "Contact" },
+];
+
 export const SideBar = () => {
 	const [selected, setSelected] = useState("");
 
 	useEffect(() => {
-		const sections = document.querySelectorAll(".section-wrapper");
-
-		const options = {
-			threshold: 0.3,
-		};
-
-		const callback: IntersectionObserverCallback = (entries) => {
+		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					setSelected(entry.target.id);
 				}
 			});
-		};
+		}, { threshold: 0.3 });
 
-		const observer = new IntersectionObserver(callback, options);
-
-		sections.forEach((section) => observer.observe(section));
+		document
+			.querySelectorAll("section[id]")
+			.forEach((section) => observer.observe(section));
 
 		return () => observer.disconnect();
 	}, []);
 
 	return (
-		<div style={{ background: "var(--background-dark)" }}>
-			<motion.nav
-				initial={{ x: -70 }}
-				animate={{ x: 0 }}
-				transition={{ duration: 0.5 }}
-				className={styles.sideBar}>
-				<span
-					className={styles.logo}
-					onClick={() => {
-						if (!document.location.hash) {
-							document.getElementById("main")?.scrollIntoView();
-						} else {
-							document.location.hash = "";
-						}
-					}}>
-					AK<span>.</span>
-				</span>
+		<motion.nav
+			initial={{ x: -70 }}
+			animate={{ x: 0 }}
+			transition={{ duration: 0.5 }}
+			className={styles.sideBar}
+			aria-label="Section navigation">
+			<a
+				className={styles.logo}
+				href="#main"
+				aria-label="Back to top">
+				AK<span>.</span>
+			</a>
+			{navItems.map(({ id, label }, index) => (
 				<motion.a
+					key={id}
 					initial={{ x: -70 }}
 					animate={{ x: 0 }}
-					transition={{ duration: 0.5, delay: 0.1 }}
-					href="#about"
-					onClick={() => {
-						setSelected("about");
-					}}
-					className={selected === "about" ? styles.selected : ""}>
-					About
+					transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
+					href={`#${id}`}
+					aria-current={selected === id ? "location" : undefined}
+					className={selected === id ? styles.selected : ""}>
+					{label}
 				</motion.a>
-				<motion.a
-					initial={{ x: -70 }}
-					animate={{ x: 0 }}
-					transition={{ duration: 0.5, delay: 0.2 }}
-					href="#projects"
-					onClick={() => setSelected("projects")}
-					className={selected === "projects" ? styles.selected : ""}>
-					Projects
-				</motion.a>
-				<motion.a
-					initial={{ x: -70 }}
-					animate={{ x: 0 }}
-					transition={{ duration: 0.5, delay: 0.3 }}
-					href="#experience"
-					onClick={() => setSelected("experience")}
-					className={selected === "experience" ? styles.selected : ""}>
-					Exp.
-				</motion.a>
-				<motion.a
-					initial={{ x: -70 }}
-					animate={{ x: 0 }}
-					transition={{ duration: 0.5, delay: 0.4 }}
-					href="#contact"
-					onClick={() => setSelected("contact")}
-					className={selected === "contact" ? styles.selected : ""}>
-					Contact
-				</motion.a>
-			</motion.nav>
-		</div>
+			))}
+		</motion.nav>
 	);
 };

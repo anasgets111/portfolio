@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { StandardButton } from "@/components/buttons/StandardButton";
 import { Reveal } from "@/components/utils/Reveal";
 import { DotGrid } from "./DotGrid";
 import styles from "./hero.module.scss";
@@ -39,12 +38,11 @@ export const Hero = () => {
 						</p>
 					</Reveal>
 					<Reveal>
-						<StandardButton
-							onClick={() =>
-								document.getElementById("contact")?.scrollIntoView()
-							}>
+						<a
+							className={styles.contactLink}
+							href="#contact">
 							Contact me
-						</StandardButton>
+						</a>
 					</Reveal>
 				</div>
 				<motion.div

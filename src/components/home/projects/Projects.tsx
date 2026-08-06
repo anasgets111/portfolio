@@ -13,14 +13,12 @@ export const Projects = () => {
 			/>
 
 			<div className={styles.projects}>
-				{projects.map((project) => {
-					return (
-						<Project
-							key={project.title}
-							{...project}
-						/>
-					);
-				})}
+				{projects.map((project) => (
+					<Project
+						key={project.title}
+						{...project}
+					/>
+				))}
 			</div>
 		</section>
 	);
@@ -30,7 +28,6 @@ const projects = [
 	{
 		title: "Sacredcube",
 		imgSrc: "/project-imgs/sacredcube.png",
-		code: "#",
 		projectLink: "https://sacredcube.co",
 		tech: ["PHP", "Laravel", "Nova", "Filament", "Vue.js", "MySQL", "Livewire"],
 		description:
@@ -58,7 +55,6 @@ const projects = [
 	{
 		title: "BasicsEngage",
 		imgSrc: "/project-imgs/basicsengage.png",
-		code: "#",
 		projectLink: "https://www.basicsengage.com/",
 		tech: ["React", "Nextjs", "Tailwind", "MongoDB"],
 		description: `Developed a fully functional e-commerce website using incorporating advanced UI design principles,

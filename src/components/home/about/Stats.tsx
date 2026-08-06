@@ -1,9 +1,7 @@
-// Stats.tsx
 import styles from "./stats.module.scss";
 import { AiFillCode } from "react-icons/ai";
 import { Reveal } from "@/components/utils/Reveal";
 
-// 1. put all chip labels in an array
 const chipList = [
 	"CSS",
 	"HTML",
@@ -48,23 +46,14 @@ export const Stats = () => {
 						<span>Skills</span>
 					</h4>
 
-					{/* 2. scrollContainer is the “mask” */}
 					<div className={styles.scrollContainer}>
-						{/* 3. render chipList twice for seamless looping */}
 						<div className={`${styles.statGrid} ${styles.scrollContent}`}>
-							{chipList.map((c) => (
+							{[...chipList, ...chipList].map((skill, index) => (
 								<span
-									key={c}
+									key={`${skill}-${index}`}
+									aria-hidden={index >= chipList.length}
 									className="chip">
-									{c}
-								</span>
-							))}
-							{chipList.map((c, i) => (
-								// second render needs unique keys
-								<span
-									key={`${c}-${i}`}
-									className="chip">
-									{c}
+									{skill}
 								</span>
 							))}
 						</div>

@@ -1,4 +1,11 @@
 .home {
   display: grid;
   grid-template-columns: 60px 1fr;
+
+  main::after {
+    content: "";
+    display: block;
+    height: 200px;
+    background: linear-gradient(180deg, var(--background), var(--background-dark));
+  }
 }

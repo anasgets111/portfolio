@@ -40,6 +40,10 @@ body {
   background: var(--background);
 }
 
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -65,4 +69,18 @@ a {
   background: var(--background-light);
   padding: 0.2rem 0.8rem;
   border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

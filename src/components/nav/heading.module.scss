@@ -20,13 +20,49 @@
   }
 }
 
-.headingButtons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+.resumeLink {
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
 
-    > a {
-      height: 46px;
+  padding: 1rem 2rem;
+  border: 1px solid var(--brand);
+  border-radius: 4px;
+
+  color: var(--brand);
+  font-size: var(--text-sm);
+  transition: 0.2s color;
+
+  svg {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -100% 100% 100% -100%;
+    z-index: -1;
+    background: var(--brand);
+    transition: 0.2s inset;
+  }
+
+  &:hover {
+    color: var(--text);
+  }
+
+  &:hover::before {
+    inset: 0;
+  }
+
+  @media (max-width: 420px) {
+    padding: 0.5rem;
+
+    svg {
+      display: block;
     }
+
+    span {
+      display: none;
+    }
+  }
 }
