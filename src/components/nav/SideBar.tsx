@@ -13,8 +13,8 @@ export const SideBar = () => {
 			threshold: 0.3,
 		};
 
-		const callback = (entries: any) => {
-			entries.forEach((entry: any) => {
+		const callback: IntersectionObserverCallback = (entries) => {
+			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					setSelected(entry.target.id);
 				}
@@ -24,6 +24,8 @@ export const SideBar = () => {
 		const observer = new IntersectionObserver(callback, options);
 
 		sections.forEach((section) => observer.observe(section));
+
+		return () => observer.disconnect();
 	}, []);
 
 	return (

@@ -1,6 +1,7 @@
 "use client";
 import styles from "./dotgrid.module.scss";
 import { animate, stagger } from "animejs";
+import type { MouseEvent } from "react";
 
 export const DotGrid = () => {
 	const GRID_WIDTH = 25;
@@ -8,7 +9,7 @@ export const DotGrid = () => {
 
 	const dots = [];
 
-	const handleDotClick = (e: any) => {
+	const handleDotClick = (event: MouseEvent<HTMLDivElement>) => {
 		// In v4, keyframes need to use 'to' instead of 'value'
 		animate(".dot-point", {
 			scale: [
@@ -25,7 +26,7 @@ export const DotGrid = () => {
 			],
 			delay: stagger(100, {
 				grid: [GRID_WIDTH, GRID_HEIGHT],
-				from: parseInt(e.target.dataset.index),
+				from: Number(event.currentTarget.dataset.index),
 			}),
 		});
 	};
